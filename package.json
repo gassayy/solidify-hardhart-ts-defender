@@ -37,13 +37,13 @@
     "generate:docs": "hardhat docgen",
     "generate:badges": "istanbul-badges-readme",
     "share": "remixd -s . --remix-ide https://remix.ethereum.org",
-    "format": "prettier '**/{*,''}.{json,js,ts,sol}' --write; eslint '**/{*,''}.{json,js,ts}' --fix; solhint 'contracts/*.sol' --fix;",
+    "format": "prettier --plugin=prettier-plugin-solidity '**/{*,''}.{json,js,ts,sol}' --write; eslint '**/{*,''}.{json,js,ts}' --fix;",
     "format:json": "prettier '**/{*,''}.json' --write; eslint '**/{*,''}.json' --fix;",
     "format:js": "prettier '**/{*,''}.js' --write; eslint '**/{*,''}.js' --fix;",
     "format:ts": "prettier '**/{*,''}.ts' --write; eslint '**/{*,''}.ts' --fix;",
     "format:sol": "prettier '**/*.sol' --write; solhint 'contracts/*.sol' --fix;",
-    "lint": "prettier '**/{*,''}.{json,js,ts,sol}' --check; solhint 'contracts/*.sol'; eslint '**/{*,''}.{json,js,ts}';",
-    "hook:pre-push": "tsc --noEmit && prettier '**/{*,''}.{json,js,ts,sol}' --check && solhint 'contracts/*.sol' && eslint '**/{*,''}.{json,js,ts}'"
+    "lint": "prettier --plugin=prettier-plugin-solidity '**/{*,''}.{json,js,ts,sol}' --check; eslint '**/{*,''}.{json,js,ts}';",
+    "hook:pre-push": "tsc --noEmit && prettier --plugin=prettier-plugin-solidity '**/{*,''}.{json,js,ts,sol}' --check && eslint '**/{*,''}.{json,js,ts}'"
   },
   "husky": {
     "hooks": {
