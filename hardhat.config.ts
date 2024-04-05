@@ -5,7 +5,7 @@ import 'hardhat-finder';
 import 'hardhat-storage-vault';
 import 'solidity-docgen';
 import 'hardhat-contract-sizer';
-import 'hardhat-tracer';
+// import 'hardhat-tracer';
 import './tasks';
 
 dotenvConfig();
